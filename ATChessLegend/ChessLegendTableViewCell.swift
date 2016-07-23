@@ -10,6 +10,7 @@ import UIKit
 
 class ChessLegendTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelChangeInRating: UILabel!
     @IBOutlet weak var imageViewSelect: UIImageView!
     @IBOutlet weak var labelRating: UILabel!
     @IBOutlet weak var labelName: UILabel!
@@ -17,6 +18,8 @@ class ChessLegendTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.labelChangeInRating.layer.cornerRadius = 8.0
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

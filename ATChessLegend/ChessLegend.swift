@@ -73,4 +73,14 @@ class ChessLegend: NSObject {
         }
     }
     
+    class func updateChessLegend(chessLegend: ChessLegend, newRating: Float, previousRating: Float) -> ChessLegend {
+     
+        let changeInRating : Float = newRating - previousRating
+        
+        let chessLegendModel : ChessLegend = ChessLegend.init(chess_id: chessLegend.chess_id, name: chessLegend.name, rating: newRating, changeInRating: changeInRating)
+        
+        return chessLegendModel
+        
+    }
+    
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import ChameleonFramework
 import SwiftyJSON
 
 let kRequestURL : String = "https://api.myjson.com/bins/1dmu1"
@@ -34,9 +34,12 @@ class ViewController: UIViewController {
         
         if competitors.count == 2 {
             
-            matchResult()
+//            doMatch()
             
-            eloRatingSystem(competitors)
+            let matchView : MatchViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MatchViewController") as! MatchViewController
+            
+            self.presentViewController(matchView, animated: true, completion: nil)
+            
             
         }
         else {
@@ -117,11 +120,13 @@ class ViewController: UIViewController {
     }
     
     func removeCompetitor(competitor : ChessLegend) {
-        let index : Int = competitors.indexOf(competitor)!
-        competitors.removeAtIndex(index)
-        if competitors.count < 2 {
-            NSNotificationCenter.defaultCenter().postNotificationName(kHideMatch, object: nil)
+        if let index : Int = competitors.indexOf(competitor) {
+            competitors.removeAtIndex(index)
+            if competitors.count < 2 {
+                NSNotificationCenter.defaultCenter().postNotificationName(kHideMatch, object: nil)
+            }
         }
+        
     }
     
     func showMatchButton() {
@@ -206,11 +211,42 @@ class ViewController: UIViewController {
         print("\(competitors[0].name) BEFORE : \(competitors[0].rating) AFTER : \(playerOneNewRating)")
         print("\(competitors[1].name) BEFORE : \(competitors[1].rating) AFTER : \(playerTwoNewRating)")
 
+        let competitorOne : ChessLegend = ChessLegend.updateChessLegend(competitors[0], newRating: playerOneNewRating, previousRating: competitors[0].rating)
+        let competitorTwo : ChessLegend = ChessLegend.updateChessLegend(competitors[1], newRating: playerTwoNewRating, previousRating: competitors[1].rating)
+        ATDatabaseManager.getDatabaseInstance().updateChessLegend(competitorOne)
+        ATDatabaseManager.getDatabaseInstance().updateChessLegend(competitorTwo)
         
-        
-    }
 
+    }
     
+    func doMatch() {
+        matchResult()
+        
+        eloRatingSystem(competitors)
+        
+        competitors.removeAll()
+        NSNotificationCenter.defaultCenter().postNotificationName(kHideMatch, object: nil)
+        loadPlayersFromLocalDatabase()
+    }
+    
+    
+
+    func setChangeInRatingLabel(changeInRating : Float,label : UILabel) -> String {
+        
+        if changeInRating == 0 {
+            label.backgroundColor = UIColor.clearColor()
+            return ""
+        }
+        else if changeInRating > 0 {
+            label.backgroundColor = UIColor.flatGreenColor()
+        }
+        else if changeInRating < 0 {
+            label.backgroundColor = UIColor.flatWatermelonColor()
+        }
+        
+        let roundOff = round(changeInRating*100)/100
+        return "\(roundOff)"
+    }
 }
 
 extension ViewController : UITableViewDataSource {
@@ -231,6 +267,15 @@ extension ViewController : UITableViewDataSource {
         
         cell.labelName.text = chessLegendModel.name
         cell.labelRating.text = "\(chessLegendModel.rating)"
+        
+        cell.labelChangeInRating.text = setChangeInRatingLabel(chessLegendModel.changeInRating, label: cell.labelChangeInRating)
+        
+        
+        
+        if competitors.count == 0 {
+            cell.imageViewSelect.image = nil
+        }
+        
         return cell
         
     }

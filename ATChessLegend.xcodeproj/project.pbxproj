@@ -17,6 +17,7 @@
 		F3662F6F1D438DCE0077ACCF /* ATDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F6E1D438DCE0077ACCF /* ATDatabaseManager.swift */; };
 		F3662F711D438F720077ACCF /* ATChessLegend.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F3662F701D438F720077ACCF /* ATChessLegend.sqlite */; };
 		F3662F731D438FAE0077ACCF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3662F721D438FAE0077ACCF /* libsqlite3.tbd */; };
+		F3662F771D43AAF30077ACCF /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F761D43AAF30077ACCF /* MatchViewController.swift */; };
 		F3C2341F1D43653800582EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C2341E1D43653800582EC6 /* AppDelegate.swift */; };
 		F3C234211D43653800582EC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C234201D43653800582EC6 /* ViewController.swift */; };
 		F3C234241D43653800582EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C234221D43653800582EC6 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		F3662F6E1D438DCE0077ACCF /* ATDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATDatabaseManager.swift; sourceTree = "<group>"; };
 		F3662F701D438F720077ACCF /* ATChessLegend.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ATChessLegend.sqlite; sourceTree = "<group>"; };
 		F3662F721D438FAE0077ACCF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F3662F761D43AAF30077ACCF /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		F3C2341B1D43653800582EC6 /* ATChessLegend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATChessLegend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C2341E1D43653800582EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C234201D43653800582EC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				F3C2341E1D43653800582EC6 /* AppDelegate.swift */,
 				F3C234201D43653800582EC6 /* ViewController.swift */,
 				F3C234221D43653800582EC6 /* Main.storyboard */,
+				F3662F761D43AAF30077ACCF /* MatchViewController.swift */,
 				F3662F6C1D4379740077ACCF /* ChessLegendTableViewCell.swift */,
 				F3C234251D43653800582EC6 /* Assets.xcassets */,
 				F3C234271D43653800582EC6 /* LaunchScreen.storyboard */,
@@ -466,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3662F771D43AAF30077ACCF /* MatchViewController.swift in Sources */,
 				F3662F671D4369AF0077ACCF /* ATJSONManager.swift in Sources */,
 				F3662F6B1D436B110077ACCF /* ChessLegend.swift in Sources */,
 				F3C234211D43653800582EC6 /* ViewController.swift in Sources */,

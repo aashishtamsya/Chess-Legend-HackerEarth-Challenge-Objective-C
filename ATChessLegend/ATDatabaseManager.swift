@@ -63,7 +63,7 @@ class ATDatabaseManager: NSObject {
         
         sharedInstance.database!.open()
         
-        let isDataUpdated = sharedInstance.database!.executeUpdate("UPDATE LEGENDS SET rating = ?, changeinrating = ? WHERE name = ? AND id = ?", withArgumentsInArray: [chessLegendModel.rating,chessLegendModel.changeInRating,chessLegendModel.name, chessLegendModel.chess_id])
+        let isDataUpdated = sharedInstance.database!.executeUpdate("UPDATE LEGENDS SET rating = ?, changeinrating = ? WHERE name = ?", withArgumentsInArray: [chessLegendModel.rating,chessLegendModel.changeInRating,chessLegendModel.name])
         
         sharedInstance.database!.close()
         
@@ -73,7 +73,7 @@ class ATDatabaseManager: NSObject {
     func deleteChessLegend(chessLegendModel : ChessLegend) -> Bool {
         sharedInstance.database?.open()
         
-        let isDataDeleted = sharedInstance.database!.executeUpdate("DELETE FROM LEGENDS WHERE name = ? AND id = ?", withArgumentsInArray: [chessLegendModel.name,chessLegendModel.chess_id])
+        let isDataDeleted = sharedInstance.database!.executeUpdate("DELETE FROM LEGENDS WHERE name = ?", withArgumentsInArray: [chessLegendModel.name])
         
         sharedInstance.database?.close()
         
