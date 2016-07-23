@@ -13,7 +13,7 @@ target 'ATChessLegend' do
 	pod 'FMDB', '~> 2.6.2'
 	pod 'FCFileManager', '~> 1.0.17'
 	pod 'UIImageView-Letters', '~> 1.1.4'
-	pod 'PNChart', '~> 0.8.9'
+	# pod 'PNChart', '~> 0.8.9'
 	pod 'Charts', '~> 2.2.5'
 	
   target 'ATChessLegendTests' do
