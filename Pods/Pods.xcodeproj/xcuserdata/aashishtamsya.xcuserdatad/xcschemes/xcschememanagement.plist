@@ -9,12 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FCFileManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PNChart.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,9 +54,24 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UICountingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIImageView-Letters.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>016D982990393D4CF14C8AE7998AEC65</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>23CF27B2BA6AC7125EFFEDA8C5AA819F</key>
 		<dict>
 			<key>primary</key>
@@ -57,7 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4872999E1BEECBC6D4D442BAE67B0618</key>
+		<key>6C18C789438292FED01EB702705FC9AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92CB12C5E42A8EF0D5ADFBB88FF4AC79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,17 +102,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B1837FF6D02800AC10308A3FE81A9DC5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6828C2508515BC0428D6BDAA1292DC9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1729402644727E31873BE70D8575EB9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EC81F0FF681D6D8DB75BD73C62CFC3D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5748C54658E707DA06CB09473C17238</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F87232AE00F0D6702159E78333FEE316</key>
+		<key>F9DA9318883ED88A276489A27BE482AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

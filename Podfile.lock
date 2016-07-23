@@ -2,27 +2,41 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - Charts (2.2.5):
+    - Charts/Core (= 2.2.5)
+  - Charts/Core (2.2.5)
   - FCFileManager (1.0.17)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
   - ReachabilitySwift (2.3.3)
   - SwiftyJSON (2.3.2)
+  - UICountingLabel (1.2.0)
+  - UIImageView-Letters (1.1.4)
 
 DEPENDENCIES:
   - ChameleonFramework (~> 2.1.0)
+  - Charts (~> 2.2.5)
   - FCFileManager (~> 1.0.17)
   - FMDB (~> 2.6.2)
+  - PNChart (~> 0.8.9)
   - ReachabilitySwift (~> 2.3.3)
   - SwiftyJSON (~> 2.3.2)
+  - UIImageView-Letters (~> 1.1.4)
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Charts: b48fcc8d7190de910ff9e9748f5360c8ea7856e5
   FCFileManager: 8bfc931ce2a6223676147e9baf0e8a65c691eca6
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+  UIImageView-Letters: f62db28076797adf3560ab7410647dc6899b9eef
 
-PODFILE CHECKSUM: d629d497244e5dec5419e675e159ad89bb5f5562
+PODFILE CHECKSUM: 723c09c9f9f3dd2da87b0adf68698e265d5d5f3b
 
 COCOAPODS: 1.0.0

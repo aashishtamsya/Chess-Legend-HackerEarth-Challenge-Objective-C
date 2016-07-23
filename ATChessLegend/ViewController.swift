@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 import SwiftyJSON
+import UIImageView_Letters
 
 let kRequestURL : String = "https://api.myjson.com/bins/1dmu1"
 let kChessLegendCellIdentifier : String = "legend cell"
@@ -18,7 +19,7 @@ let kShowMatch : String = "Show Match"
 let kHideMatch : String = "Hide Match"
 let K_FACTOR : Float = 32
 var matchResultValue : Int = Int()
-
+let kCheckImageName : String = "king"
 class ViewController: UIViewController {
     
     @IBOutlet weak var matchButtonShow: NSLayoutConstraint!
@@ -42,8 +43,16 @@ class ViewController: UIViewController {
             
             
         }
+        else if competitors.count == 1 {
+            
+            self.alert("Select Players", message: "Please Select One More Player to being a match.")
+        }
+        else if competitors.count < 1 {
+            self.alert("Select Players", message: "Please Select Two Players to being a match.")
+
+        }
         else {
-            print("No enough competitors")
+            self.alert("Players Exceeding", message: "Only Two Players of your choice are allowed.")
         }
     }
     
@@ -154,80 +163,80 @@ class ViewController: UIViewController {
         }
     }
     
-    func matchResult() {
-        
-        let result : Int = Int(arc4random_uniform(3)) + 1
-        
-        matchResultValue = result
-        print("Result Value : \(result)")
-        
-        var winnerChessLegend : ChessLegend = ChessLegend()
-        if result == 1 {
-            winnerChessLegend = competitors[0]
-            print("\(winnerChessLegend.name) Wins!")
-        }
-        else if result == 2 {
-            winnerChessLegend = competitors[1]
-            print("\(winnerChessLegend.name) Wins!")
-        }
-        else if result == 3 {
-            print("Draw")
-        }
-        else {
-            print("Unknown Case")
-        }
-        
-        
-
-    }
-    
-    func eloRatingSystem(competitors : [ChessLegend]) {
-        
-        let playerOneTransformRating : Float = (10 * competitors[0].rating)/400
-        let playerTwoTransformRating : Float = (10 * competitors[1].rating)/400
-
-        let playerOneExpectedScore : Float =  playerOneTransformRating / (playerOneTransformRating + playerTwoTransformRating)
-        let playerTwoExpectedScore : Float = playerTwoTransformRating / (playerOneTransformRating + playerTwoTransformRating)
-        
-        var playerOneActualScore : Float = Float()
-        var playerTwoActualScore : Float = Float()
-
-        switch matchResultValue {
-        case 1: playerOneActualScore = 1
-            playerTwoActualScore = 0
-        
-        case 2 : playerOneActualScore = 0
-        playerTwoActualScore = 1
-        case 3 : playerOneActualScore = 0.5
-        playerTwoActualScore = 0.5
-            
-        default:
-            print("Unknown Case")
-        }
-        
-        let playerOneNewRating : Float = competitors[0].rating + K_FACTOR * (playerOneActualScore - playerOneExpectedScore)
-        let playerTwoNewRating : Float = competitors[0].rating + K_FACTOR * (playerTwoActualScore - playerTwoExpectedScore)
-        
-        print("\(competitors[0].name) BEFORE : \(competitors[0].rating) AFTER : \(playerOneNewRating)")
-        print("\(competitors[1].name) BEFORE : \(competitors[1].rating) AFTER : \(playerTwoNewRating)")
-
-        let competitorOne : ChessLegend = ChessLegend.updateChessLegend(competitors[0], newRating: playerOneNewRating, previousRating: competitors[0].rating)
-        let competitorTwo : ChessLegend = ChessLegend.updateChessLegend(competitors[1], newRating: playerTwoNewRating, previousRating: competitors[1].rating)
-        ATDatabaseManager.getDatabaseInstance().updateChessLegend(competitorOne)
-        ATDatabaseManager.getDatabaseInstance().updateChessLegend(competitorTwo)
-        
-
-    }
-    
-    func doMatch() {
-        matchResult()
-        
-        eloRatingSystem(competitors)
-        
-        competitors.removeAll()
-        NSNotificationCenter.defaultCenter().postNotificationName(kHideMatch, object: nil)
-        loadPlayersFromLocalDatabase()
-    }
+//    func matchResult() {
+//        
+//        let result : Int = Int(arc4random_uniform(3)) + 1
+//        
+//        matchResultValue = result
+//        print("Result Value : \(result)")
+//        
+//        var winnerChessLegend : ChessLegend = ChessLegend()
+//        if result == 1 {
+//            winnerChessLegend = competitors[0]
+//            print("\(winnerChessLegend.name) Wins!")
+//        }
+//        else if result == 2 {
+//            winnerChessLegend = competitors[1]
+//            print("\(winnerChessLegend.name) Wins!")
+//        }
+//        else if result == 3 {
+//            print("Draw")
+//        }
+//        else {
+//            print("Unknown Case")
+//        }
+//        
+//        
+//
+//    }
+//    
+//    func eloRatingSystem(competitors : [ChessLegend]) {
+//        
+//        let playerOneTransformRating : Float = (10 * competitors[0].rating)/400
+//        let playerTwoTransformRating : Float = (10 * competitors[1].rating)/400
+//
+//        let playerOneExpectedScore : Float =  playerOneTransformRating / (playerOneTransformRating + playerTwoTransformRating)
+//        let playerTwoExpectedScore : Float = playerTwoTransformRating / (playerOneTransformRating + playerTwoTransformRating)
+//        
+//        var playerOneActualScore : Float = Float()
+//        var playerTwoActualScore : Float = Float()
+//
+//        switch matchResultValue {
+//        case 1: playerOneActualScore = 1
+//            playerTwoActualScore = 0
+//        
+//        case 2 : playerOneActualScore = 0
+//        playerTwoActualScore = 1
+//        case 3 : playerOneActualScore = 0.5
+//        playerTwoActualScore = 0.5
+//            
+//        default:
+//            print("Unknown Case")
+//        }
+//        
+//        let playerOneNewRating : Float = competitors[0].rating + K_FACTOR * (playerOneActualScore - playerOneExpectedScore)
+//        let playerTwoNewRating : Float = competitors[0].rating + K_FACTOR * (playerTwoActualScore - playerTwoExpectedScore)
+//        
+//        print("\(competitors[0].name) BEFORE : \(competitors[0].rating) AFTER : \(playerOneNewRating)")
+//        print("\(competitors[1].name) BEFORE : \(competitors[1].rating) AFTER : \(playerTwoNewRating)")
+//
+//        let competitorOne : ChessLegend = ChessLegend.updateChessLegend(competitors[0], newRating: playerOneNewRating, previousRating: competitors[0].rating)
+//        let competitorTwo : ChessLegend = ChessLegend.updateChessLegend(competitors[1], newRating: playerTwoNewRating, previousRating: competitors[1].rating)
+//        ATDatabaseManager.getDatabaseInstance().updateChessLegend(competitorOne)
+//        ATDatabaseManager.getDatabaseInstance().updateChessLegend(competitorTwo)
+//        
+//
+//    }
+//    
+//    func doMatch() {
+//        matchResult()
+//        
+//        eloRatingSystem(competitors)
+//        
+//        competitors.removeAll()
+//        NSNotificationCenter.defaultCenter().postNotificationName(kHideMatch, object: nil)
+//        loadPlayersFromLocalDatabase()
+//    }
     
     
 
@@ -247,6 +256,20 @@ class ViewController: UIViewController {
         let roundOff = round(changeInRating*100)/100
         return "\(roundOff)"
     }
+    
+    func alert(title : String, message : String) {
+        
+        let alert : UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let ok : UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.Default) { (action) in
+            
+            alert.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        alert.addAction(ok)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }
 
 extension ViewController : UITableViewDataSource {
@@ -262,15 +285,21 @@ extension ViewController : UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell : ChessLegendTableViewCell = tableView.dequeueReusableCellWithIdentifier(kChessLegendCellIdentifier) as! ChessLegendTableViewCell
+    
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
         
         let chessLegendModel : ChessLegend = allChessLegends[indexPath.row]
         
+    
         cell.labelName.text = chessLegendModel.name
         cell.labelRating.text = "\(chessLegendModel.rating)"
         
         cell.labelChangeInRating.text = setChangeInRatingLabel(chessLegendModel.changeInRating, label: cell.labelChangeInRating)
         
+        cell.imageViewProfile.setImageWithString(chessLegendModel.name, color: nil, circular: true)
         
+        cell.labelChangeInRating.layer.cornerRadius = 8.0
         
         if competitors.count == 0 {
             cell.imageViewSelect.image = nil
@@ -288,7 +317,7 @@ extension ViewController : UITableViewDelegate {
         let cell : ChessLegendTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as! ChessLegendTableViewCell
         
         
-        if let image = UIImage.init(named: "success") {
+        if let image = UIImage.init(named: kCheckImageName) {
             if cell.imageViewSelect.image == image {
                 cell.imageViewSelect.image = nil
                 removeCompetitor(allChessLegends[indexPath.row])

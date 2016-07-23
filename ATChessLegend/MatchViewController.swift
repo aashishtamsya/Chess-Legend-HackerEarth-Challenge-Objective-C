@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import PNChart
+import Charts
+
+
+let kWinImageName : String = "king"
+let kLossImageName : String = "checkmate"
 
 class MatchViewController: UIViewController {
+    @IBOutlet weak var pieChart: PieChartView!
 
+    @IBOutlet weak var playerOneWinImage: UIImageView!
 
     
     @IBOutlet weak var startMatchButton: UIButton!
+    @IBOutlet weak var playerTwoWinImage: UIImageView!
     @IBOutlet weak var iamgeViewPlayerOne: UIImageView!
     
     @IBOutlet weak var labelPlayerOneName: UILabel!
@@ -48,6 +57,12 @@ class MatchViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
         initUI()
         
         self.performSelector(#selector(MatchViewController.showExpectedScore), withObject: nil, afterDelay: 0.5)
@@ -69,11 +84,18 @@ class MatchViewController: UIViewController {
     
         self.labelPlayerOneName.text = competitors[0].name
         self.labelPlayerOneRating.text = "\(competitors[0].rating)"
+        self.iamgeViewPlayerOne.setImageWithString(competitors[0].name, color: nil, circular: false)
+        self.iamgeViewPlayerOne.layer.cornerRadius = 8.0
         
         self.labelPlayerTwoName.text = competitors[1].name
         self.labelPlayerTwoRating.text = "\(competitors[1].rating)"
-        
+        self.imageViewPlayerTwo.setImageWithString(competitors[1].name, color: nil, circular: false)
+        self.imageViewPlayerTwo.layer.cornerRadius = 8.0
+
         self.startMatchButton.enabled = false
+        
+        self.pieChart.descriptionTextColor = NSUIColor.flatBlackColorDark()
+        self.pieChart.infoTextColor = NSUIColor.flatBlackColorDark()
     }
 
     func showExpectedScore() {
@@ -110,19 +132,26 @@ class MatchViewController: UIViewController {
         if result == 1 {
             winnerChessLegend = competitors[0]
             print("\(winnerChessLegend.name) Wins!")
-            self.viewPlayerOne.backgroundColor = UIColor.flatLimeColorDark()
-            self.viewPlayerTwo.backgroundColor = UIColor.flatRedColorDark()
+//            self.viewPlayerOne.backgroundColor = UIColor.flatLimeColorDark()
+//            self.viewPlayerTwo.backgroundColor = UIColor.flatRedColorDark()
+            self.playerOneWinImage.image = UIImage.init(named: kWinImageName)
+            self.playerTwoWinImage.image = UIImage.init(named: kLossImageName)
         }
         else if result == 2 {
             winnerChessLegend = competitors[1]
             print("\(winnerChessLegend.name) Wins!")
-            self.viewPlayerOne.backgroundColor = UIColor.flatRedColorDark()
-            self.viewPlayerTwo.backgroundColor = UIColor.flatLimeColorDark()
+//            self.viewPlayerOne.backgroundColor = UIColor.flatRedColorDark()
+//            self.viewPlayerTwo.backgroundColor = UIColor.flatLimeColorDark()
+            self.playerTwoWinImage.image = UIImage.init(named: kWinImageName)
+            self.playerOneWinImage.image = UIImage.init(named: kLossImageName)
         }
         else if result == 3 {
             print("Draw")
-            self.viewPlayerOne.backgroundColor = UIColor.flatSandColorDark()
-            self.viewPlayerTwo.backgroundColor = UIColor.flatSandColorDark()
+//            self.viewPlayerOne.backgroundColor = UIColor.flatSandColorDark()
+//            self.viewPlayerTwo.backgroundColor = UIColor.flatSandColorDark()
+            
+            self.playerTwoWinImage.image = UIImage.init(named: kWinImageName)
+            self.playerOneWinImage.image = UIImage.init(named: kWinImageName)
         }
         else {
             print("Unknown Case")
@@ -134,6 +163,9 @@ class MatchViewController: UIViewController {
     
     func eloRatingSystem(competitors : [ChessLegend]) {
         
+        
+        
+
         let playerOneTransformRating : Float = (10 * competitors[0].rating)/400
         let playerTwoTransformRating : Float = (10 * competitors[1].rating)/400
         
@@ -143,24 +175,34 @@ class MatchViewController: UIViewController {
         var playerOneActualScore : Float = Float()
         var playerTwoActualScore : Float = Float()
         
+        var winner : ChessLegend = ChessLegend()
+        var losser : ChessLegend = ChessLegend()
+        
         switch matchResultValue {
         case 1: playerOneActualScore = 1
         playerTwoActualScore = 0
+            winner = competitors[0]
+            losser = competitors[1]
             
         case 2 : playerOneActualScore = 0
         playerTwoActualScore = 1
+        winner = competitors[1]
+        losser = competitors[0]
         case 3 : playerOneActualScore = 0.5
         playerTwoActualScore = 0.5
-            
+        winner = competitors[0]
+        losser = competitors[1]
         default:
             print("Unknown Case")
         }
         
+        let winnerPreviousRating : Float = winner.rating
+        let losserPreviousRating : Float = losser.rating
+        
         let playerOneNewRating : Float = competitors[0].rating + K_FACTOR * (playerOneActualScore - playerOneExpectedScore)
         let playerTwoNewRating : Float = competitors[0].rating + K_FACTOR * (playerTwoActualScore - playerTwoExpectedScore)
         
-        print("\(competitors[0].name) BEFORE : \(competitors[0].rating) AFTER : \(playerOneNewRating)")
-        print("\(competitors[1].name) BEFORE : \(competitors[1].rating) AFTER : \(playerTwoNewRating)")
+
         
         let competitorOne : ChessLegend = ChessLegend.updateChessLegend(competitors[0], newRating: playerOneNewRating, previousRating: competitors[0].rating)
         let competitorTwo : ChessLegend = ChessLegend.updateChessLegend(competitors[1], newRating: playerTwoNewRating, previousRating: competitors[1].rating)
@@ -168,16 +210,81 @@ class MatchViewController: UIViewController {
         ATDatabaseManager.getDatabaseInstance().updateChessLegend(competitorTwo)
         
         
+        var losserChange : Float = Float()
+        var winnerChange : Float = Float()
+        
+        if winner == competitorOne {
+            winnerChange = Float(abs(competitorOne.changeInRating))
+            losserChange = Float(abs(competitorTwo.changeInRating))
+        }
+        else {
+            winnerChange = Float(abs(competitorTwo.changeInRating))
+            losserChange = Float(abs(competitorOne.changeInRating))
+        }
+        
+        let dataPoints : [String] = ["Rating of \(winner.name) prior to match","Rating won by \(winner.name) after match","Rating of \(losser.name) prior to match","Rating lost by \(losser.name) after match"]
+    
+        let values : [Double] = [Double(winnerPreviousRating),Double(winnerChange),Double(losserPreviousRating),Double(losserChange)]
+        
+        setChart(dataPoints, values: values)
+        
+
     }
     
     func doMatch() {
         matchResult()
         
         eloRatingSystem(competitors)
-                
-//        NSNotificationCenter.defaultCenter().postNotificationName(kHideMatch, object: nil)
+        
+        if matchResultValue == 1 {
+            
+            self.alert("Winner", message: "\(competitors[0].name) won the game!")
+        }
+        else if matchResultValue == 2 {
+            self.alert("Winner", message: "\(competitors[1].name) won the game!")
+
+        }
+        else if matchResultValue == 3 {
+            self.alert("Draw", message: "Match was draw!")
+        }
+        
     }
     
+    func setChart(dataPoints: [String], values: [Double]) {
+        
+        var dataEntries: [ChartDataEntry] = []
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = ChartDataEntry(value: values[i], xIndex: i)
+            dataEntries.append(dataEntry)
+        }
+        
+        let pieChartDataSet = PieChartDataSet(yVals: dataEntries, label: "Ratings")
+        let pieChartData = PieChartData(xVals: dataPoints, dataSet: pieChartDataSet)
+        self.pieChart.data = pieChartData
+        
+        let colors: [UIColor] = [UIColor.flatYellowColorDark(), UIColor.flatOrangeColor(),UIColor.flatSkyBlueColor(),UIColor.flatGreenColorDark()]
+        
+        pieChartDataSet.colors = colors
+        
+        self.pieChart.animate(xAxisDuration: 1.4, easingOption: ChartEasingOption.EaseInOutQuad)
+
+        
+    }
+    
+    func alert(title : String, message : String) {
+        
+        let alert : UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let ok : UIAlertAction = UIAlertAction.init(title: "OK", style: UIAlertActionStyle.Default) { (action) in
+            
+            alert.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        alert.addAction(ok)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
     
     

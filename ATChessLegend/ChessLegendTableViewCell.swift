@@ -19,7 +19,7 @@ class ChessLegendTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        self.labelChangeInRating.layer.cornerRadius = 8.0
+//        self.labelChangeInRating.layer.cornerRadius = 8.0
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
