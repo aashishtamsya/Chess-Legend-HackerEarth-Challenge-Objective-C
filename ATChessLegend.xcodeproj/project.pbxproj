@@ -1,0 +1,697 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AF8589A13E9D5354956A2FB /* Pods_ATChessLegendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29E7EADDC8D0C4E42246455 /* Pods_ATChessLegendTests.framework */; };
+		78B0E658EEE2C54C85AAF5A9 /* Pods_ATChessLegend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEAA1B97ABB43D96960C7E5 /* Pods_ATChessLegend.framework */; };
+		B56FCC3D28B2BBFA45E41288 /* Pods_ATChessLegendUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D101D0072BDF9156DFFBE28D /* Pods_ATChessLegendUITests.framework */; };
+		F3662F671D4369AF0077ACCF /* ATJSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F661D4369AF0077ACCF /* ATJSONManager.swift */; };
+		F3662F691D436A3F0077ACCF /* ATUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F681D436A3F0077ACCF /* ATUtils.swift */; };
+		F3662F6B1D436B110077ACCF /* ChessLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F6A1D436B110077ACCF /* ChessLegend.swift */; };
+		F3C2341F1D43653800582EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C2341E1D43653800582EC6 /* AppDelegate.swift */; };
+		F3C234211D43653800582EC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C234201D43653800582EC6 /* ViewController.swift */; };
+		F3C234241D43653800582EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C234221D43653800582EC6 /* Main.storyboard */; };
+		F3C234261D43653800582EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3C234251D43653800582EC6 /* Assets.xcassets */; };
+		F3C234291D43653800582EC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C234271D43653800582EC6 /* LaunchScreen.storyboard */; };
+		F3C234341D43653900582EC6 /* ATChessLegendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C234331D43653900582EC6 /* ATChessLegendTests.swift */; };
+		F3C2343F1D43653900582EC6 /* ATChessLegendUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C2343E1D43653900582EC6 /* ATChessLegendUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3C234301D43653900582EC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C234131D43653800582EC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3C2341A1D43653800582EC6;
+			remoteInfo = ATChessLegend;
+		};
+		F3C2343B1D43653900582EC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C234131D43653800582EC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3C2341A1D43653800582EC6;
+			remoteInfo = ATChessLegend;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D3B1753D6672E8604137F5C /* Pods-ATChessLegendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATChessLegendTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATChessLegendTests/Pods-ATChessLegendTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39A122722674B52136AEA242 /* Pods-ATChessLegend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATChessLegend.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATChessLegend/Pods-ATChessLegend.debug.xcconfig"; sourceTree = "<group>"; };
+		6DEAA1B97ABB43D96960C7E5 /* Pods_ATChessLegend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATChessLegend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		951E513BB551B8E757864677 /* Pods-ATChessLegend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATChessLegend.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATChessLegend/Pods-ATChessLegend.release.xcconfig"; sourceTree = "<group>"; };
+		9905B7593A10FE9A2E7679FD /* Pods-ATChessLegendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATChessLegendTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATChessLegendTests/Pods-ATChessLegendTests.release.xcconfig"; sourceTree = "<group>"; };
+		9DA5B03585B7EA1D8DBB2482 /* Pods-ATChessLegendUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATChessLegendUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ATChessLegendUITests/Pods-ATChessLegendUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FA50BAF27FB9F38C63B9068 /* Pods-ATChessLegendUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ATChessLegendUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ATChessLegendUITests/Pods-ATChessLegendUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D101D0072BDF9156DFFBE28D /* Pods_ATChessLegendUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATChessLegendUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E29E7EADDC8D0C4E42246455 /* Pods_ATChessLegendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ATChessLegendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3662F661D4369AF0077ACCF /* ATJSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATJSONManager.swift; sourceTree = "<group>"; };
+		F3662F681D436A3F0077ACCF /* ATUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATUtils.swift; sourceTree = "<group>"; };
+		F3662F6A1D436B110077ACCF /* ChessLegend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessLegend.swift; sourceTree = "<group>"; };
+		F3C2341B1D43653800582EC6 /* ATChessLegend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATChessLegend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C2341E1D43653800582EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3C234201D43653800582EC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3C234231D43653800582EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3C234251D43653800582EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3C234281D43653800582EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3C2342A1D43653900582EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C2342F1D43653900582EC6 /* ATChessLegendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATChessLegendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C234331D43653900582EC6 /* ATChessLegendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATChessLegendTests.swift; sourceTree = "<group>"; };
+		F3C234351D43653900582EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3C2343A1D43653900582EC6 /* ATChessLegendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ATChessLegendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C2343E1D43653900582EC6 /* ATChessLegendUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATChessLegendUITests.swift; sourceTree = "<group>"; };
+		F3C234401D43653900582EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3C234181D43653800582EC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B0E658EEE2C54C85AAF5A9 /* Pods_ATChessLegend.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C2342C1D43653900582EC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AF8589A13E9D5354956A2FB /* Pods_ATChessLegendTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C234371D43653900582EC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56FCC3D28B2BBFA45E41288 /* Pods_ATChessLegendUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57F2D4373C42179D1B005469 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39A122722674B52136AEA242 /* Pods-ATChessLegend.debug.xcconfig */,
+				951E513BB551B8E757864677 /* Pods-ATChessLegend.release.xcconfig */,
+				0D3B1753D6672E8604137F5C /* Pods-ATChessLegendTests.debug.xcconfig */,
+				9905B7593A10FE9A2E7679FD /* Pods-ATChessLegendTests.release.xcconfig */,
+				9DA5B03585B7EA1D8DBB2482 /* Pods-ATChessLegendUITests.debug.xcconfig */,
+				9FA50BAF27FB9F38C63B9068 /* Pods-ATChessLegendUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB7179E8BCD7EE5ED217F089 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DEAA1B97ABB43D96960C7E5 /* Pods_ATChessLegend.framework */,
+				E29E7EADDC8D0C4E42246455 /* Pods_ATChessLegendTests.framework */,
+				D101D0072BDF9156DFFBE28D /* Pods_ATChessLegendUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3C234121D43653800582EC6 = {
+			isa = PBXGroup;
+			children = (
+				F3C2341D1D43653800582EC6 /* ATChessLegend */,
+				F3C234321D43653900582EC6 /* ATChessLegendTests */,
+				F3C2343D1D43653900582EC6 /* ATChessLegendUITests */,
+				F3C2341C1D43653800582EC6 /* Products */,
+				57F2D4373C42179D1B005469 /* Pods */,
+				DB7179E8BCD7EE5ED217F089 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3C2341C1D43653800582EC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3C2341B1D43653800582EC6 /* ATChessLegend.app */,
+				F3C2342F1D43653900582EC6 /* ATChessLegendTests.xctest */,
+				F3C2343A1D43653900582EC6 /* ATChessLegendUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3C2341D1D43653800582EC6 /* ATChessLegend */ = {
+			isa = PBXGroup;
+			children = (
+				F3662F6A1D436B110077ACCF /* ChessLegend.swift */,
+				F3662F681D436A3F0077ACCF /* ATUtils.swift */,
+				F3662F661D4369AF0077ACCF /* ATJSONManager.swift */,
+				F3C2341E1D43653800582EC6 /* AppDelegate.swift */,
+				F3C234201D43653800582EC6 /* ViewController.swift */,
+				F3C234221D43653800582EC6 /* Main.storyboard */,
+				F3C234251D43653800582EC6 /* Assets.xcassets */,
+				F3C234271D43653800582EC6 /* LaunchScreen.storyboard */,
+				F3C2342A1D43653900582EC6 /* Info.plist */,
+			);
+			path = ATChessLegend;
+			sourceTree = "<group>";
+		};
+		F3C234321D43653900582EC6 /* ATChessLegendTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3C234331D43653900582EC6 /* ATChessLegendTests.swift */,
+				F3C234351D43653900582EC6 /* Info.plist */,
+			);
+			path = ATChessLegendTests;
+			sourceTree = "<group>";
+		};
+		F3C2343D1D43653900582EC6 /* ATChessLegendUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3C2343E1D43653900582EC6 /* ATChessLegendUITests.swift */,
+				F3C234401D43653900582EC6 /* Info.plist */,
+			);
+			path = ATChessLegendUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3C2341A1D43653800582EC6 /* ATChessLegend */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C234431D43653900582EC6 /* Build configuration list for PBXNativeTarget "ATChessLegend" */;
+			buildPhases = (
+				F2AF879DE88BCF8CB4EC950D /* 📦 Check Pods Manifest.lock */,
+				F3C234171D43653800582EC6 /* Sources */,
+				F3C234181D43653800582EC6 /* Frameworks */,
+				F3C234191D43653800582EC6 /* Resources */,
+				D0D019AC5B5E63B80A399BC1 /* 📦 Embed Pods Frameworks */,
+				B512588A25649DC8363CA622 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ATChessLegend;
+			productName = ATChessLegend;
+			productReference = F3C2341B1D43653800582EC6 /* ATChessLegend.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3C2342E1D43653900582EC6 /* ATChessLegendTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C234461D43653900582EC6 /* Build configuration list for PBXNativeTarget "ATChessLegendTests" */;
+			buildPhases = (
+				4B0F3E073DB2CB1D854C8469 /* 📦 Check Pods Manifest.lock */,
+				F3C2342B1D43653900582EC6 /* Sources */,
+				F3C2342C1D43653900582EC6 /* Frameworks */,
+				F3C2342D1D43653900582EC6 /* Resources */,
+				0C08CFC6D28E42B0167B4502 /* 📦 Embed Pods Frameworks */,
+				76F322EDDB8A2CF5CF3FE099 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3C234311D43653900582EC6 /* PBXTargetDependency */,
+			);
+			name = ATChessLegendTests;
+			productName = ATChessLegendTests;
+			productReference = F3C2342F1D43653900582EC6 /* ATChessLegendTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3C234391D43653900582EC6 /* ATChessLegendUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C234491D43653900582EC6 /* Build configuration list for PBXNativeTarget "ATChessLegendUITests" */;
+			buildPhases = (
+				7E3C4E1C09ADA4FEB9DE159C /* 📦 Check Pods Manifest.lock */,
+				F3C234361D43653900582EC6 /* Sources */,
+				F3C234371D43653900582EC6 /* Frameworks */,
+				F3C234381D43653900582EC6 /* Resources */,
+				FB42D7127D1533087BE2D67D /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3C2343C1D43653900582EC6 /* PBXTargetDependency */,
+			);
+			name = ATChessLegendUITests;
+			productName = ATChessLegendUITests;
+			productReference = F3C2343A1D43653900582EC6 /* ATChessLegendUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3C234131D43653800582EC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Aashish Tamsya";
+				TargetAttributes = {
+					F3C2341A1D43653800582EC6 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					F3C2342E1D43653900582EC6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F3C2341A1D43653800582EC6;
+					};
+					F3C234391D43653900582EC6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F3C2341A1D43653800582EC6;
+					};
+				};
+			};
+			buildConfigurationList = F3C234161D43653800582EC6 /* Build configuration list for PBXProject "ATChessLegend" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3C234121D43653800582EC6;
+			productRefGroup = F3C2341C1D43653800582EC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3C2341A1D43653800582EC6 /* ATChessLegend */,
+				F3C2342E1D43653900582EC6 /* ATChessLegendTests */,
+				F3C234391D43653900582EC6 /* ATChessLegendUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3C234191D43653800582EC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C234291D43653800582EC6 /* LaunchScreen.storyboard in Resources */,
+				F3C234261D43653800582EC6 /* Assets.xcassets in Resources */,
+				F3C234241D43653800582EC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C2342D1D43653900582EC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C234381D43653900582EC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C08CFC6D28E42B0167B4502 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATChessLegendTests/Pods-ATChessLegendTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B0F3E073DB2CB1D854C8469 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		76F322EDDB8A2CF5CF3FE099 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATChessLegendTests/Pods-ATChessLegendTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E3C4E1C09ADA4FEB9DE159C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B512588A25649DC8363CA622 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATChessLegend/Pods-ATChessLegend-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0D019AC5B5E63B80A399BC1 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATChessLegend/Pods-ATChessLegend-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2AF879DE88BCF8CB4EC950D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB42D7127D1533087BE2D67D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ATChessLegendUITests/Pods-ATChessLegendUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3C234171D43653800582EC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3662F671D4369AF0077ACCF /* ATJSONManager.swift in Sources */,
+				F3662F6B1D436B110077ACCF /* ChessLegend.swift in Sources */,
+				F3C234211D43653800582EC6 /* ViewController.swift in Sources */,
+				F3662F691D436A3F0077ACCF /* ATUtils.swift in Sources */,
+				F3C2341F1D43653800582EC6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C2342B1D43653900582EC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C234341D43653900582EC6 /* ATChessLegendTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C234361D43653900582EC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C2343F1D43653900582EC6 /* ATChessLegendUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3C234311D43653900582EC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3C2341A1D43653800582EC6 /* ATChessLegend */;
+			targetProxy = F3C234301D43653900582EC6 /* PBXContainerItemProxy */;
+		};
+		F3C2343C1D43653900582EC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3C2341A1D43653800582EC6 /* ATChessLegend */;
+			targetProxy = F3C2343B1D43653900582EC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3C234221D43653800582EC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3C234231D43653800582EC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3C234271D43653800582EC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3C234281D43653800582EC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3C234411D43653900582EC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F3C234421D43653900582EC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3C234441D43653900582EC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39A122722674B52136AEA242 /* Pods-ATChessLegend.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ATChessLegend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ATChessLegend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3C234451D43653900582EC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 951E513BB551B8E757864677 /* Pods-ATChessLegend.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ATChessLegend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ATChessLegend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F3C234471D43653900582EC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D3B1753D6672E8604137F5C /* Pods-ATChessLegendTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ATChessLegendTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ATChessLegendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATChessLegend.app/ATChessLegend";
+			};
+			name = Debug;
+		};
+		F3C234481D43653900582EC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9905B7593A10FE9A2E7679FD /* Pods-ATChessLegendTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ATChessLegendTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ATChessLegendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ATChessLegend.app/ATChessLegend";
+			};
+			name = Release;
+		};
+		F3C2344A1D43653900582EC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA5B03585B7EA1D8DBB2482 /* Pods-ATChessLegendUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = ATChessLegendUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ATChessLegendUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ATChessLegend;
+			};
+			name = Debug;
+		};
+		F3C2344B1D43653900582EC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FA50BAF27FB9F38C63B9068 /* Pods-ATChessLegendUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = ATChessLegendUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aashishtamsya.ATChessLegendUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ATChessLegend;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3C234161D43653800582EC6 /* Build configuration list for PBXProject "ATChessLegend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C234411D43653900582EC6 /* Debug */,
+				F3C234421D43653900582EC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C234431D43653900582EC6 /* Build configuration list for PBXNativeTarget "ATChessLegend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C234441D43653900582EC6 /* Debug */,
+				F3C234451D43653900582EC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C234461D43653900582EC6 /* Build configuration list for PBXNativeTarget "ATChessLegendTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C234471D43653900582EC6 /* Debug */,
+				F3C234481D43653900582EC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C234491D43653900582EC6 /* Build configuration list for PBXNativeTarget "ATChessLegendUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C2344A1D43653900582EC6 /* Debug */,
+				F3C2344B1D43653900582EC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3C234131D43653800582EC6 /* Project object */;
+}

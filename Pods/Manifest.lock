@@ -1,0 +1,20 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ReachabilitySwift (2.3.3)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - ChameleonFramework (~> 2.1.0)
+  - ReachabilitySwift (~> 2.3.3)
+  - SwiftyJSON (~> 2.3.2)
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: 0f1d833806e6023b1e8fee6349fd984c4e578ce4
+
+COCOAPODS: 1.0.0
