@@ -37,6 +37,18 @@ A pseudo iOS application which would let users list top 20 rated chess players o
 
 ![DEMO](https://github.com/aashishtamsya/HackerEarth-Challenge/blob/master/Resources/DEMO/DEMO.gif)
 
+### Screenshots 
+
+![S1](/Resources/Screenshots/S1.png)
+![S2](/Resources/Screenshots/S2.png)
+![S3](/Resources/Screenshots/S3.png)
+![S4](/Resources/Screenshots/S4.png)
+![S5](/Resources/Screenshots/S5.png)
+![S6](/Resources/Screenshots/S6.png)
+![S7](/Resources/Screenshots/S7.png)
+![S8](/Resources/Screenshots/S8.png)
+
+
 ### Minimum Requirements Of Project
 
 *	Players details. Use the url mentioned below which contains the JSON consisting of details.
