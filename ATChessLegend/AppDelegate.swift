@@ -9,6 +9,8 @@
 import UIKit
 import ReachabilitySwift
 
+var totalRow : Int32 = Int32()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        ATUtils.sharedManager.copyDatabase()
+        ATUtils.sharedManager.getFilePathForDatabase(kDatabaseName)
+        
+        ATDatabaseManager.getDatabaseInstance().getTableRows()
+        
         
         do {
             reachability = try Reachability.reachabilityForInternetConnection()

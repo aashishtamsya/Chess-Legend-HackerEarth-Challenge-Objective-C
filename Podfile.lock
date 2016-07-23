@@ -2,19 +2,27 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - FCFileManager (1.0.17)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - ReachabilitySwift (2.3.3)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - ChameleonFramework (~> 2.1.0)
+  - FCFileManager (~> 1.0.17)
+  - FMDB (~> 2.6.2)
   - ReachabilitySwift (~> 2.3.3)
   - SwiftyJSON (~> 2.3.2)
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  FCFileManager: 8bfc931ce2a6223676147e9baf0e8a65c691eca6
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 0f1d833806e6023b1e8fee6349fd984c4e578ce4
+PODFILE CHECKSUM: d629d497244e5dec5419e675e159ad89bb5f5562
 
 COCOAPODS: 1.0.0

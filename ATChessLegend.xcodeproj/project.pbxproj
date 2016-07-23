@@ -13,6 +13,10 @@
 		F3662F671D4369AF0077ACCF /* ATJSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F661D4369AF0077ACCF /* ATJSONManager.swift */; };
 		F3662F691D436A3F0077ACCF /* ATUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F681D436A3F0077ACCF /* ATUtils.swift */; };
 		F3662F6B1D436B110077ACCF /* ChessLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F6A1D436B110077ACCF /* ChessLegend.swift */; };
+		F3662F6D1D4379740077ACCF /* ChessLegendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F6C1D4379740077ACCF /* ChessLegendTableViewCell.swift */; };
+		F3662F6F1D438DCE0077ACCF /* ATDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3662F6E1D438DCE0077ACCF /* ATDatabaseManager.swift */; };
+		F3662F711D438F720077ACCF /* ATChessLegend.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F3662F701D438F720077ACCF /* ATChessLegend.sqlite */; };
+		F3662F731D438FAE0077ACCF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3662F721D438FAE0077ACCF /* libsqlite3.tbd */; };
 		F3C2341F1D43653800582EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C2341E1D43653800582EC6 /* AppDelegate.swift */; };
 		F3C234211D43653800582EC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C234201D43653800582EC6 /* ViewController.swift */; };
 		F3C234241D43653800582EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3C234221D43653800582EC6 /* Main.storyboard */; };
@@ -52,6 +56,10 @@
 		F3662F661D4369AF0077ACCF /* ATJSONManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATJSONManager.swift; sourceTree = "<group>"; };
 		F3662F681D436A3F0077ACCF /* ATUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATUtils.swift; sourceTree = "<group>"; };
 		F3662F6A1D436B110077ACCF /* ChessLegend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessLegend.swift; sourceTree = "<group>"; };
+		F3662F6C1D4379740077ACCF /* ChessLegendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessLegendTableViewCell.swift; sourceTree = "<group>"; };
+		F3662F6E1D438DCE0077ACCF /* ATDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATDatabaseManager.swift; sourceTree = "<group>"; };
+		F3662F701D438F720077ACCF /* ATChessLegend.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ATChessLegend.sqlite; sourceTree = "<group>"; };
+		F3662F721D438FAE0077ACCF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		F3C2341B1D43653800582EC6 /* ATChessLegend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ATChessLegend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C2341E1D43653800582EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3C234201D43653800582EC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3662F731D438FAE0077ACCF /* libsqlite3.tbd in Frameworks */,
 				78B0E658EEE2C54C85AAF5A9 /* Pods_ATChessLegend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,6 +120,7 @@
 		DB7179E8BCD7EE5ED217F089 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3662F721D438FAE0077ACCF /* libsqlite3.tbd */,
 				6DEAA1B97ABB43D96960C7E5 /* Pods_ATChessLegend.framework */,
 				E29E7EADDC8D0C4E42246455 /* Pods_ATChessLegendTests.framework */,
 				D101D0072BDF9156DFFBE28D /* Pods_ATChessLegendUITests.framework */,
@@ -118,9 +128,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F3662F741D439D350077ACCF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F3662F6E1D438DCE0077ACCF /* ATDatabaseManager.swift */,
+				F3662F681D436A3F0077ACCF /* ATUtils.swift */,
+				F3662F661D4369AF0077ACCF /* ATJSONManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		F3662F751D439D4E0077ACCF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3662F6A1D436B110077ACCF /* ChessLegend.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		F3C234121D43653800582EC6 = {
 			isa = PBXGroup;
 			children = (
+				F3662F701D438F720077ACCF /* ATChessLegend.sqlite */,
 				F3C2341D1D43653800582EC6 /* ATChessLegend */,
 				F3C234321D43653900582EC6 /* ATChessLegendTests */,
 				F3C2343D1D43653900582EC6 /* ATChessLegendUITests */,
@@ -143,12 +172,12 @@
 		F3C2341D1D43653800582EC6 /* ATChessLegend */ = {
 			isa = PBXGroup;
 			children = (
-				F3662F6A1D436B110077ACCF /* ChessLegend.swift */,
-				F3662F681D436A3F0077ACCF /* ATUtils.swift */,
-				F3662F661D4369AF0077ACCF /* ATJSONManager.swift */,
+				F3662F751D439D4E0077ACCF /* Models */,
+				F3662F741D439D350077ACCF /* Managers */,
 				F3C2341E1D43653800582EC6 /* AppDelegate.swift */,
 				F3C234201D43653800582EC6 /* ViewController.swift */,
 				F3C234221D43653800582EC6 /* Main.storyboard */,
+				F3662F6C1D4379740077ACCF /* ChessLegendTableViewCell.swift */,
 				F3C234251D43653800582EC6 /* Assets.xcassets */,
 				F3C234271D43653800582EC6 /* LaunchScreen.storyboard */,
 				F3C2342A1D43653900582EC6 /* Info.plist */,
@@ -288,6 +317,7 @@
 			files = (
 				F3C234291D43653800582EC6 /* LaunchScreen.storyboard in Resources */,
 				F3C234261D43653800582EC6 /* Assets.xcassets in Resources */,
+				F3662F711D438F720077ACCF /* ATChessLegend.sqlite in Resources */,
 				F3C234241D43653800582EC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,8 +469,10 @@
 				F3662F671D4369AF0077ACCF /* ATJSONManager.swift in Sources */,
 				F3662F6B1D436B110077ACCF /* ChessLegend.swift in Sources */,
 				F3C234211D43653800582EC6 /* ViewController.swift in Sources */,
+				F3662F6D1D4379740077ACCF /* ChessLegendTableViewCell.swift in Sources */,
 				F3662F691D436A3F0077ACCF /* ATUtils.swift in Sources */,
 				F3C2341F1D43653800582EC6 /* AppDelegate.swift in Sources */,
+				F3662F6F1D438DCE0077ACCF /* ATDatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,19 +14,17 @@ class ATJSONManager: NSObject {
     
     static let sharedManager = ATJSONManager()
     
-    func getJSONData(URL : NSURL) {
+    func getJSON(URL : NSURL) -> JSON? {
+        
+        var json : JSON?
         
         if ATUtils.sharedManager.checkInternetConnection() == true {
-            
             let dataFromWeb : NSData = NSData.init(contentsOfURL: URL)!
-            
-            let jsonResponse = JSON.init(data: dataFromWeb)
-            
-            let legends = jsonResponse["legend"]
-            
+            if let jsonResponse : JSON = JSON.init(data: dataFromWeb) {
+                json = jsonResponse
+            }
         }
-        
-        
+        return json
     }
 
 }

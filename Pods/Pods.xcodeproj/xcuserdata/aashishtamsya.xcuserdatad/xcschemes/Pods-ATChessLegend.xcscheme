@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F24B5974BF76E944CDBBD29A26F3B859"
+               BlueprintIdentifier = "4872999E1BEECBC6D4D442BAE67B0618"
                BuildableName = "Pods_ATChessLegend.framework"
                BlueprintName = "Pods-ATChessLegend"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F24B5974BF76E944CDBBD29A26F3B859"
+            BlueprintIdentifier = "4872999E1BEECBC6D4D442BAE67B0618"
             BuildableName = "Pods_ATChessLegend.framework"
             BlueprintName = "Pods-ATChessLegend"
             ReferencedContainer = "container:Pods.xcodeproj">

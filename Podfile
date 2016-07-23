@@ -10,6 +10,8 @@ target 'ATChessLegend' do
 	pod 'ReachabilitySwift', '~> 2.3.3'
 	pod 'ChameleonFramework', '~> 2.1.0'
 	pod 'SwiftyJSON', '~> 2.3.2'
+	pod 'FMDB', '~> 2.6.2'
+	pod 'FCFileManager', '~> 1.0.17'
 	
   target 'ATChessLegendTests' do
     inherit! :search_paths

@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ATChessLegend/ATJSONManager.swift"
-            timestampString = "490957695.028693"
+            filePath = "ATChessLegend/ChessLegend.swift"
+            timestampString = "490969917.339541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "getJSONData(_:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "buildLegends(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

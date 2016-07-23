@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FCFileManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ATChessLegend.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>23CF27B2BA6AC7125EFFEDA8C5AA819F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41B1B011D241525F0216CE846BA9D14D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FBCCDC593F1C543465DEE62232FC764</key>
+		<key>4872999E1BEECBC6D4D442BAE67B0618</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A586E433C115B9B6A97A1FFDCC63FA66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EC81F0FF681D6D8DB75BD73C62CFC3D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECD14BACB861F1BF009C0F5A42FAA4A5</key>
+		<key>F5748C54658E707DA06CB09473C17238</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F24B5974BF76E944CDBBD29A26F3B859</key>
+		<key>F87232AE00F0D6702159E78333FEE316</key>
 		<dict>
 			<key>primary</key>
 			<true/>
