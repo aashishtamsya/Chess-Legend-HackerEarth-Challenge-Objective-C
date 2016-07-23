@@ -95,7 +95,7 @@ http://devdactic.com/rest-api-parse-json-swift/
 
 *	Suppose two players with the current ratings r(1) and r(2) compete in a match. Calculate their updated rating r'(1) and r'(2) after said match.
 
-*	Take 'n' = 400 and k-factor = 32.
+*	Take `'n' = 400` and `k-factor = 32`.
 
 *	The first step is to compute the transformed rating for each player or team:
 
@@ -121,7 +121,7 @@ http://devdactic.com/rest-api-parse-json-swift/
 
 `r'(2) = r(2) + K * (S(2) – E(2))``
 
-*	As a result, plot this r’(1) and r’(2) in a graph relatively.
+*	As a result, plot this `r’(1)` and `r’(2)` in a graph relatively.
 
 
 ### Installation
