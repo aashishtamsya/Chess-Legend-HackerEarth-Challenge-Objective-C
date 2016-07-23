@@ -35,7 +35,7 @@ A pseudo iOS application which would let users list top 20 rated chess players o
 
 ### Demo
 
-![DEMO](https://github.com/aashishtamsya/ImagesAnimation/blob/master/Resources/DEMO/DEMO.gif)
+<!-- ![DEMO](https://github.com/aashishtamsya/ImagesAnimation/blob/master/Resources/DEMO/DEMO.gif) -->
 
 ### Minimum Requirements Of Project
 
