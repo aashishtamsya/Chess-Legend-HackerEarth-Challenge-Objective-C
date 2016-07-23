@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ATDatabaseManager.swift
 //  ATChessLegend
 //
 //  Created by Aashish Tamsya on 23/07/16.
@@ -11,7 +11,7 @@ import FMDB
 
 
 let kDatabaseName : String = "ATChessLegend.sqlite"
-let sharedInstance = ATDatabaseManager()
+let sharedInstance         = ATDatabaseManager()
 
 class ATDatabaseManager: NSObject {
 

@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import PNChart
 import Charts
 
 
-let kWinImageName : String = "king"
+let kWinImageName : String  = "king"
 let kLossImageName : String = "checkmate"
 
 class MatchViewController: UIViewController {
@@ -247,6 +246,8 @@ class MatchViewController: UIViewController {
         else if matchResultValue == 3 {
             self.alert("Draw", message: "Match was draw!")
         }
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(kHideMatch, object: nil)
         
     }
     

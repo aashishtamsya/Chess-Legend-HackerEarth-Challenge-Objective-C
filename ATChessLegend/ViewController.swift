@@ -11,15 +11,16 @@ import ChameleonFramework
 import SwiftyJSON
 import UIImageView_Letters
 
-let kRequestURL : String = "https://api.myjson.com/bins/1dmu1"
+let kRequestURL : String                = "https://api.myjson.com/bins/1dmu1"
 let kChessLegendCellIdentifier : String = "legend cell"
-var competitors : [ChessLegend] = [ChessLegend]()
-var allChessLegends : [ChessLegend] = [ChessLegend]()
-let kShowMatch : String = "Show Match"
-let kHideMatch : String = "Hide Match"
-let K_FACTOR : Float = 32
-var matchResultValue : Int = Int()
-let kCheckImageName : String = "king"
+var competitors : [ChessLegend]         = [ChessLegend]()
+var allChessLegends : [ChessLegend]     = [ChessLegend]()
+let kShowMatch : String                 = "Show Match"
+let kHideMatch : String                 = "Hide Match"
+let K_FACTOR : Float                    = 32
+var matchResultValue : Int              = Int()
+let kCheckImageName : String            = "king"
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var matchButtonShow: NSLayoutConstraint!
