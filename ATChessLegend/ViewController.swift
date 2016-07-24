@@ -82,6 +82,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /**
+     Method to initialize application
+     
+     - returns: no value
+     */
     func initApplication() {
 //     self.tableViewChessLegends.allowsSelection = false
         
@@ -91,7 +96,9 @@ class ViewController: UIViewController {
         
         
     }
-    
+    /**
+     Method to fetch data from web or local database
+     */
     func fetchData() {
         
         if totalRow >= 20 {
@@ -110,7 +117,9 @@ class ViewController: UIViewController {
 
         }
     }
-    
+    /**
+     `loadPlayersFromLocalDatabase` is used to load player information from local database
+     */
     func loadPlayersFromLocalDatabase() {
         
         allChessLegends = ATDatabaseManager.getDatabaseInstance().fetchAllChessLegends()
@@ -121,6 +130,11 @@ class ViewController: UIViewController {
         
     }
 
+    /**
+     method to add competitor
+     
+     - parameter competitor: `ChessLegend` object
+     */
     func addCompetitor(competitor : ChessLegend) {
         competitors.append(competitor)
         
@@ -129,6 +143,11 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     method to remove competitor
+     
+     - parameter competitor: `ChessLegend` object
+     */
     func removeCompetitor(competitor : ChessLegend) {
         if let index : Int = competitors.indexOf(competitor) {
             competitors.removeAtIndex(index)
