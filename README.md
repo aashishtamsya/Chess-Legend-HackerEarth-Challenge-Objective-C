@@ -82,11 +82,9 @@ A pseudo iOS application which would let users list top 20 rated chess players o
 
 ### Guide
 
-*	Mokriya Battle of Legends Data Url: https://goo.gl/oRJrE8
+*	Mokriya Battle of Legends Data Url: [API URL](https://goo.gl/oRJrE8)
 
-*	iOS JSON:
-
-http://devdactic.com/rest-api-parse-json-swift/
+*	iOS JSON: [REST API PARSE JSON SWIFT](http://devdactic.com/rest-api-parse-json-swift/)
 
 
 ### Expectation
