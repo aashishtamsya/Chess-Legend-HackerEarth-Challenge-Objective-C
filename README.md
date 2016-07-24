@@ -17,7 +17,7 @@
 -	[Extra Work](#extra-work)
 -	[Guide](#guide)
 -	[Expectation](#expectation)
--	[Explanation on how to make them play against each other](#explanation-on-how-to-mak-them-play-against-each-other)
+-	[How to make them play against each other](#How-to-mak-them-play-against-each-other)
 -	[Explanation on Elo rating system](#explanation-on-elo-rating-system)
 -	[Installation](#installation)
 -	[Contributing](#contributing)
@@ -97,7 +97,7 @@ A pseudo iOS application which would let users list top 20 rated chess players o
 
 *	Display their updated rating on the UI.
 
-### Explanation on how to make them play against each other
+### How to make them play against each other
 
 *	Use a random function from range 1 to 3. If it generates 1, player 1 wins and gets 1 and player 2 gets 0. If it generates 2, player 2 wins and gets 1 and player 1 gets 0. If it generates 3, match is drawn and both get 0.5.
 
